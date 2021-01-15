@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20210108_Quest_1_1", "20210108_Quest_1_1\20210108_Quest_1_1.vcxproj", "{EBDAF900-BEDF-4E57-85EA-1765B2FA5527}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20210115_Quest_2_1", "20210115_Quest_2_1\20210115_Quest_2_1.vcxproj", "{BBF50A93-C967-4486-A66B-2436B909A552}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{EBDAF900-BEDF-4E57-85EA-1765B2FA5527}.Release|x64.Build.0 = Release|x64
 		{EBDAF900-BEDF-4E57-85EA-1765B2FA5527}.Release|x86.ActiveCfg = Release|Win32
 		{EBDAF900-BEDF-4E57-85EA-1765B2FA5527}.Release|x86.Build.0 = Release|Win32
+		{BBF50A93-C967-4486-A66B-2436B909A552}.Debug|x64.ActiveCfg = Debug|x64
+		{BBF50A93-C967-4486-A66B-2436B909A552}.Debug|x64.Build.0 = Debug|x64
+		{BBF50A93-C967-4486-A66B-2436B909A552}.Debug|x86.ActiveCfg = Debug|Win32
+		{BBF50A93-C967-4486-A66B-2436B909A552}.Debug|x86.Build.0 = Debug|Win32
+		{BBF50A93-C967-4486-A66B-2436B909A552}.Release|x64.ActiveCfg = Release|x64
+		{BBF50A93-C967-4486-A66B-2436B909A552}.Release|x64.Build.0 = Release|x64
+		{BBF50A93-C967-4486-A66B-2436B909A552}.Release|x86.ActiveCfg = Release|Win32
+		{BBF50A93-C967-4486-A66B-2436B909A552}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
