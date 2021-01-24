@@ -1,6 +1,6 @@
 // Student ID: 20382528
 // Quest: Hare Today Hanoi Tomorrow
-// Trophies: 15/23
+// Trophies: 23/23
 
 #include "Hanoi.h"
 
@@ -32,38 +32,40 @@ string Hanoi::get_moves(int num_discs, int src, int dst, int tmp)
 {
     string result = lookup_moves(num_discs, src, dst);
 
+    if (_cache.size() < unsigned(num_discs) + 1)
+    {
+        _cache.resize(num_discs + 1);
+    }
+
+    if (_cache[num_discs].size() < unsigned(src) + 1)
+    {
+        _cache[num_discs].resize(src + 1);
+    }
+
+    if (_cache[num_discs][src].size() < unsigned(dst) + 1)
+    {
+        _cache[num_discs][src].resize(dst + 1);
+    }
+
     if (result.length() == 0)
     {
         if (num_discs == 1)
         {
-            ostringstream oss;
-            oss << src;
-            result += oss.str() + "->";
-            oss.str("");
-            oss.clear();
-            oss << dst;
-            result += oss.str() + "\n";
+            ostringstream oss1, oss2;
+            oss1 << src;
+            oss2 << dst;
+            result += oss1.str() + "->" + oss2.str() + "\n";
         }
         else if (num_discs > 1)
         {
             result += get_moves(num_discs - 1, src, tmp, dst);
             result += get_moves(1, src, dst, tmp);
             result += get_moves(num_discs - 1, tmp, dst, src);
-        }
 
-        while (!(_cache.size() > unsigned(num_discs)))
-        {
-            _cache.push_back({});
-        }
-
-        while (!(_cache[num_discs].size() > unsigned(src)))
-        {
-            _cache[num_discs].push_back({});
-        }
-
-        while (!(_cache[num_discs][src].size() > unsigned(dst)))
-        {
-            _cache[num_discs][src].push_back({});
+            if (_cache[num_discs - 1].size() > 0)
+            {
+                _cache[num_discs - 1].clear();
+            }
         }
 
         _cache[num_discs][src][dst] = result;
