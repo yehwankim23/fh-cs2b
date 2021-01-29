@@ -27,7 +27,7 @@ public:
     bool equals(const Automaton& that);
 
     bool make_next_gen(const vector<int>& current_gen, vector<int>& next_gen);
-    string gen_first_n_generations(size_t n = 100, size_t width = 101);
+    string get_first_n_generations(size_t n = 100, size_t width = 101);
 
     string generation_to_string(const vector<int>& gen, size_t width);
 
