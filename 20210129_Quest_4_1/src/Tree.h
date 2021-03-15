@@ -18,9 +18,7 @@ private:
         string _data;
         Node* _sibling, * _child;
 
-        static bool is_equal(const Node* p1, const Node* p2);
-
-        Node(string s = "");
+        Node(string s = "") : _data(s), _sibling(nullptr), _child(nullptr) {}
         Node(const Node& that);
         const Node& operator=(const Node& that);
         ~Node();
@@ -35,6 +33,8 @@ private:
 
         bool operator==(const Node& that) const;
         bool operator!=(const Node& that) const;
+
+        static bool is_equal(const Node* p1, const Node* p2);
     };
 
     Node* _root;
