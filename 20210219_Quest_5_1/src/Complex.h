@@ -35,8 +35,8 @@ public:
     class Div_By_Zero_Exception
     {
     public:
-        string to_string() {};
-        string what() {};
+        string to_string();
+        string what();
     };
 
     Complex operator+(const Complex& that) const;
